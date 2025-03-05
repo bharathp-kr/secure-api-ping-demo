@@ -1,0 +1,12 @@
+spring:
+  profiles:
+    active: local
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: pfsso.ping.krpoc.com
+          jwk-set-uri: https://pfsso.ping.krpoc.com/pf/JWKS
+        opaquetoken:
+          client-id: ${CLIENT_ID}
+          client-secret: ${CLIENT_SECRET}
